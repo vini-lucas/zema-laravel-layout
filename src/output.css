@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
@@ -163,6 +165,73 @@
   }
 }
 @layer utilities {
+  .table {
+    display: table;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-gradient-to-l {
+    --tw-gradient-position: to left in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[linear-gradient\(-45deg\,_black\,white\)\] {
+    background-image: linear-gradient(-45deg, black,white);
+  }
+  .bg-\[linear-gradient\(0deg\,_black\,white\)\] {
+    background-image: linear-gradient(0deg, black,white);
+  }
+  .bg-\[linear-gradient\(1deg\,_black\,white\)\] {
+    background-image: linear-gradient(1deg, black,white);
+  }
+  .bg-\[linear-gradient\(315deg\,_\#1e40af\,_\#2563eb\)\] {
+    background-image: linear-gradient(315deg, #1e40af, #2563eb);
+  }
+  .bg-\[linear-gradient\(315deg\,_\#3030D6\,_\#191970\)\] {
+    background-image: linear-gradient(315deg, #3030D6, #191970);
+  }
+  .bg-\[linear-gradient\(315deg\,_\#191970\,_\#2563eb\)\] {
+    background-image: linear-gradient(315deg, #191970, #2563eb);
+  }
+  .bg-\[linear-gradient\(315deg\,_\#191970\,_\#3030D6\)\] {
+    background-image: linear-gradient(315deg, #191970, #3030D6);
+  }
+  .bg-\[linear-gradient\(315deg\,_\#191970\,_\#191970\)\] {
+    background-image: linear-gradient(315deg, #191970, #191970);
+  }
+  .bg-\[linear-gradient\(315deg\,_black\,_black\)\] {
+    background-image: linear-gradient(315deg, black, black);
+  }
+  .bg-\[linear-gradient\(315deg\,_black\,white\)\] {
+    background-image: linear-gradient(315deg, black,white);
+  }
+  .bg-\[linear-gradient\(315deg\,_wh\,_\#191970\)\] {
+    background-image: linear-gradient(315deg, wh, #191970);
+  }
+  .bg-\[linear-gradient\(315deg\,_white\,_\#191970\)\] {
+    background-image: linear-gradient(315deg, white, #191970);
+  }
+  .bg-\[linear-gradient\(315deg\,_white\,_black\)\] {
+    background-image: linear-gradient(315deg, white, black);
+  }
+  .from-blue-800 {
+    --tw-gradient-from: var(--color-blue-800);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-blue-600 {
+    --tw-gradient-to: var(--color-blue-600);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -174,15 +243,82 @@
   .underline {
     text-decoration-line: underline;
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }
