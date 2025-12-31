@@ -5,25 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Zema</title>
 </head>
 
-<body class="bg-linear-to-l from-[#191970] to-[#3030D6] min-h-screen flex">
+<body class="bg-linear-to-l from-[#191970] to-[#3030D6] h-screen w-screen flex flex-col">
 
-    <!-- Logo da Zema -->
-    <a href="index.html" class="inline-block">
-        <img src="public/zema-logo.png" alt="Zema" height="82" width="82">
-    </a>
+    <!-- Itens do topo -->
+    <div class="w-full flex items-center h-[8.33%] px-6 justify-center">
 
-    <!-- Navbar -->
-    <nav class="bg-[#D9D9D9] h-22.5 w-400 items-center">
-        <span class="text-black">INSS</span>
-        <span class="text-black">USUÁRIOS</span>
-        <span class="text-black">EMPRESAS</span>
-        <span class="text-black">FILIAIS</span>
-        <span class="text-black">PRODUTOS</span>
-        <span class="text-black">PLANOS DE PRODUTOS</span>
-    </nav>
+        <!-- Logo da Zema -->
+        <div class="flex items-center justify-center h-full w-12 ml-auto mr-auto">
+            <a href="#"><img src="public/zema-logo.png" class="h-10 w-10"></a>
+        </div>
+
+        <!-- Navbar -->
+        <nav
+            class="bg-[#D9D9D9] h-full flex items-center gap-8 px-8 mx-auto w-[83.3%] justify-center shadow-xl shadow-black/30 font-medium">
+            <div class="block h-full items-center justify-center">
+                <span class="flex mt-3.5">INSS</span>
+                <span class="flex bg-linear-to-t from-[#191970] to-[#3030D6] w-full h-2 mt-2"></span>
+            </div>
+            <span>USUÁRIOS</span>
+            <span>EMPRESAS</span>
+            <span>FILIAIS</span>
+            <span>PRODUTOS</span>
+            <span>PLANOS DE PRODUTOS</span>
+        </nav>
+
+        <!-- Ícone de perfil -->
+        <div
+            class="bg-[#D9D9D9] h-full w-12 rounded-2xl flex items-center justify-center ml-auto mr-auto shadow-xl shadow-black/30">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+
+    <!-- Modals das propostas -->
+    <div class="flex h-full w-full items-center justify-center absolute">
+        <section class="flex flex-col h-[63%] w-[96.25%]">
+
+            <!-- Linha de três propostas -->
+            <div class="inline-flex w-full h-full bg-orange-600">
+
+                <!-- Modal de cada proposta -->
+                <div class="flex bg-[#D9D9D9] w-[32.47%] h-[47%] ml-[1.30%] mr-[0.65%] mt-[1.30%]">
+
+                </div>
+
+                <!-- Modal de cada proposta -->
+                <div class="flex bg-[#D9D9D9] w-[32.47%] h-[47%] mr-[0.65%] ml-[0.65%] mt-[1.30%]">
+
+                </div>
+
+                <!-- Modal de cada proposta -->
+                <div class="flex bg-[#D9D9D9] w-[32.47%] h-[47%] ml-[0.65%] mr-[1.30%] mt-[1.30%]">
+
+                </div>
+                
+            </div>
+
+        </section>
+    </div>
 
 </body>
 
