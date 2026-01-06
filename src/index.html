@@ -106,7 +106,7 @@
     <!-- Rodapé -->
     <footer class="w-full h-[8.33%] absolute bottom-0 flex justify-center">
         <div
-            class="w-[50%] h-full bg-[#D9D9D9] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] justify-center items-center inline-flex">
+            class="relative w-[50%] h-full bg-[#D9D9D9] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] justify-center items-center inline-flex">
 
             <!-- Pesquisar pelo CPF -->
             <div
@@ -120,7 +120,8 @@
                 <!-- Lupa -->
                 <div
                     class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[18.22%] h-full justify-center items-center group hover:from-[#A9A9A9] hover:to-[#A9A9A9] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-700">
-                    <i class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] hover:text-[#191970] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-700"></i>
+                    <i
+                        class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] hover:text-[#191970] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-700"></i>
                 </div>
             </div>
 
@@ -164,13 +165,14 @@
                     <i class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9]"></i>
                 </div>
             </div>
-        </div>
 
-        <!-- Botão para aparecer relatório das propostas e configurações avançadas -->
-        <div class="absolute w-[50%] h-[23.66%] flex justify-end">
-            <div class="w-[6.12%] h-full flex justify-end items-center pr-2.5 pt-1">
-               <i class="fa-solid fa-bars text-[#191970]"></i>
+            <!-- Botão para aparecer relatório das propostas e configurações avançadas -->
+            <div class="absolute w-[3.7%] h-[23.66%] flex justify-center items-center top-0 right-0">
+                <div class="w-full h-full flex justify-center items-center pt-1">
+                    <i class="fa-solid fa-bars text-[#191970] text-sm"></i>
+                </div>
             </div>
+            
         </div>
     </footer>
 
