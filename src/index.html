@@ -104,13 +104,13 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="w-full h-[8.33%] absolute bottom-0 flex justify-center">
+    <footer class="w-full h-[8.33%] absolute bottom-0 inline-flex justify-center">
         <div
-            class="relative w-[50%] h-full bg-[#D9D9D9] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] justify-center items-center inline-flex">
+            class="absolute w-[50%] h-full bg-[#D9D9D9] shadow-[0px_0px_10px_10px_rgba(0,0,0,0.3)] justify-center items-center inline-flex">
 
             <!-- Pesquisar pelo CPF -->
             <div
-                class="bg-[#D9D9D9] w-[23.4%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between border-r-[#191970] mr-[1.50%] shadow-xl shadow-black/30">
+                class="bg-[#D9D9D9] w-[23.4%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between mr-[1.50%] shadow-xl shadow-black/30">
 
                 <!-- Placeholder do CPF -->
                 <div class="flex pl-2 pr-2 justify-center items-center h-full w-full">
@@ -119,9 +119,9 @@
 
                 <!-- Lupa -->
                 <div
-                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[18.22%] h-full justify-center items-center group hover:from-[#A9A9A9] hover:to-[#A9A9A9] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-700">
+                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[18.22%] h-full justify-center items-center group hover:from-[#A9A9A9] hover:to-[#A9A9A9] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-350 cursor-pointer border-l-2 hoborder-l-solid border-l-[#3030D6]">
                     <i
-                        class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] hover:text-[#191970] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-700"></i>
+                        class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] group-hover:text-[#191970] group-hover:transition transition group-hover:delay-150 delay-150 duration-700 group-hover:duration-700"></i>
                 </div>
             </div>
 
@@ -130,7 +130,7 @@
 
             <!-- Pesquisar pela data -->
             <div
-                class="bg-[#D9D9D9] w-[39.43%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between border-r-[#191970] ml-[1.50%] mr-[1.50%] shadow-xl shadow-black/30">
+                class="bg-[#D9D9D9] w-[39.43%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between ml-[1.50%] mr-[1.50%] shadow-xl shadow-black/30">
 
                 <!-- Placeholder das datas -->
                 <div class="flex pl-2 pr-2 justify-center items-center h-full w-full">
@@ -142,9 +142,11 @@
 
                 <!-- Lupa -->
                 <div
-                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[15.22%] h-full justify-center items-center">
-                    <i class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9]"></i>
+                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[15.22%] h-full justify-center items-center group hover:from-[#A9A9A9] hover:to-[#A9A9A9] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-350 cursor-pointer border-l-2 hoborder-l-solid border-l-[#3030D6]">
+                    <i
+                        class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] group-hover:text-[#191970] group-hover:transition transition group-hover:delay-150 delay-150 duration-700 group-hover:duration-700"></i>
                 </div>
+
             </div>
 
             <!-- Traço de separação -->
@@ -152,7 +154,7 @@
 
             <!-- Pesquisar pelo número da proposta -->
             <div
-                class="bg-[#D9D9D9] w-[23.4%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between border-r-[#191970] ml-[1.50%] shadow-xl shadow-black/30">
+                class="bg-[#D9D9D9] w-[23.4%] h-[39.67%] inline-flex border-2 border-solid border-[#3030D6] rounded-xs justify-between ml-[1.50%] shadow-xl shadow-black/30">
 
                 <!-- Placeholder do número da proposta -->
                 <div class="flex pl-2 pr-2 justify-center items-center h-full w-full">
@@ -161,21 +163,64 @@
 
                 <!-- Lupa -->
                 <div
-                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[18.22%] h-full justify-center items-center">
-                    <i class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9]"></i>
+                    class="bg-linear-to-l from-[#191970] to-[#3030D6] flex w-[18.22%] h-full justify-center items-center group hover:from-[#A9A9A9] hover:to-[#A9A9A9] hover:transition transition hover:delay-150 delay-150 duration-700 hover:duration-350 cursor-pointer border-l-2 hoborder-l-solid border-l-[#3030D6]">
+                    <i
+                        class="fa-solid fa-magnifying-glass text-xs text-[#A9A9A9] group-hover:text-[#191970] group-hover:transition transition group-hover:delay-150 delay-150 duration-700 group-hover:duration-700"></i>
                 </div>
+
             </div>
 
             <!-- Botão para aparecer relatório das propostas e configurações avançadas -->
-            <div class="absolute w-[3.7%] h-[23.66%] flex justify-center items-center top-0 right-0">
-                <div class="w-full h-full flex justify-center items-center pt-1">
+            <div
+                class="absolute w-[3.7%] h-[23.66%] inline-flex justify-center items-center top-0 right-0 cursor-pointer">
+                <div class="w-full h-full flex justify-center items-center pt-1"
+                    onclick="return openModalGearAdvanced()">
                     <i class="fa-solid fa-bars text-[#191970] text-sm"></i>
                 </div>
             </div>
-            
+
         </div>
+
+        <!-- Relatório das propostas e configurações avançadas -->
+        <div class="h-full w-[25%] absolute right-0 hidden" id="modalGearAdvanced">
+            <div
+                class="bg-[#D9D9D9] shadow-[5px_10px_10px_0px_rgba(0,0,0,0.6)] h-[30%] w-[15%] flex justify-center items-center">
+                <span class="flex items-center">
+                    <i class="fa-solid fa-file text-xs text-[#006400] cursor-pointer"></i>
+                </span>
+                <span class="flex items-center">
+                    <i class="fa-solid fa-gear text-xs text-[#FF8C00] cursor-pointer"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="h-full w-[10%] bg-amber-400 absolute left-0 box" onclick="return teste()"></div>
+
     </footer>
 
+
+    <script>
+        function openModalGearAdvanced() {
+            if (document.getElementById("modalGearAdvanced").classList.contains("hidden")) {
+                document.getElementById("modalGearAdvanced").classList.remove("hidden");
+            } else {
+                document.getElementById("modalGearAdvanced").classList.add("hidden");
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script>
+        function teste() {
+            gsap.fromTo(".box", {
+                opacity: 0,
+                duration: 3
+            }, {
+                duration: 9,
+                x: 200
+            });
+        }
+
+    </script>
 </body>
 
 </html>
