@@ -74,17 +74,18 @@
                     <div class="h-[15.3%] w-[91.67%] inline-flex">
 
                         <!-- Informação do número da proposta -->
-                        <div class="h-full w-[50%] inline-flex justify-center items-center">
+                        <div class="h-full w-[50%] inline-flex justify-center items-center mt-0.75">
                             <span
                                 class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs font-">PROPOSTA</span>
                             <span
                                 class="bg-linear-to-l from-[#A9A9A9] to-[#C0C0C0] bg-clip-text text-transparent font-serif text-xs">#XXXXX</span>
                         </div>
-                        
+
                         <div class="h-full w-[50%] flex justify-center items-center">
 
                             <!-- Banner de alerta de pendências -->
-                            <div class="w-full h-[75.39%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-xl shadow-black/30">
+                            <div
+                                class="w-full h-[75.39%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
                                 <div class="w-[18%] h-full flex justify-center items-center">
                                     <i class="fa-solid fa-exclamation text-xs text-[#FDF8E8]"></i>
                                 </div>
@@ -96,11 +97,49 @@
 
                         </div>
                     </div>
-                    
-                    <!-- Traço de separação -->
-                    <div class="bg-[#C0C0C0] w-[91.67%] h-px"></div>
-                    <div class="bg-emerald-500 h-full w-full">
 
+                    <!-- Traço de separação -->
+                    <div class="bg-[#C0C0C0] w-[91.67%] h-px mt-0.75"></div>
+
+                    <!-- Corpo da proposta -->
+                    <div class="bg-[#D9D9D9] h-full w-full inline-flex items-center">
+
+                        <!-- Dados dentro do corpo da proposta -->
+                        <div class="h-full w-[50%] flex flex-col items-end justify-end">
+                            <div class="w-[91.67%] h-[8.89%] inline-flex justify-center items-center mt-2 ">
+                                <div class="flex-1 flex justify-start">
+                                    <div class="bg-[#C0C0C0] h-px w-[93%]"></div>
+                                </div>
+                                <span class="text-[10px]">DADOS</span>
+                                <div class="flex-1 flex justify-end">
+                                    <div class="bg-[#C0C0C0] h-px w-[93%]"></div>
+                                </div>
+                            </div>
+                            <div class="bg-amber-500 h-full w-[91.67%]">
+
+                                <!-- CPF do cliente -->
+                                <div>
+
+                                </div>
+
+                                <!-- Nome do cliente -->
+                                 <div>
+
+                                 </div>
+
+                                 <!-- Loja -->
+                                  <div>
+
+                                  </div>
+                            </div>
+                        </div>
+
+                        <!-- Traço de separação -->
+                        <div class="bg-[#C0C0C0] h-[82.22%] w-px"></div>
+
+                        <div class="h-full w-[50%]">
+
+                        </div>
                     </div>
                 </div>
 
@@ -276,7 +315,9 @@
                 gsap.to('#modalProfile', {
                     y: 54,
                     onStart: () => {
-                        document.getElementById('optionProfile').classList.remove('rounded-t-2xl');
+                        setTimeout(() => {
+                            document.getElementById('optionProfile').classList.remove('rounded-t-2xl')
+                        }, 50);
                         document.getElementById('iconProfile').classList.remove('rounded-b-2xl');
                         document.getElementById('iconProfile').classList.remove('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
                     }
@@ -287,8 +328,12 @@
                     y: 0,
                     onStart: () => {
                         document.getElementById('optionProfile').classList.add('rounded-t-2xl');
-                        document.getElementById('iconProfile').classList.add('rounded-b-2xl');
-                        document.getElementById('iconProfile').classList.add('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
+                        setTimeout(() => {
+                            document.getElementById('iconProfile').classList.add('rounded-b-2xl')
+                        }, 220);
+                        setTimeout(() => {
+                            document.getElementById('iconProfile').classList.add('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]'), 920
+                        });
                     }
                 })
             }
