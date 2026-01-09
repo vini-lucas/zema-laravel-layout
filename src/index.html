@@ -50,7 +50,8 @@
         </div>
 
         <!-- Modal de opções de perfil -->
-        <div class="h-13.5 w-[3.8%] absolute right-0 mr-11 flex flex-col justify-center items-center" id="modalProfile">
+        <div class="h-13.5 w-[3.8%] absolute right-0 mr-11 flex flex-col justify-center items-center xl:mr-14 xl:w-[3.85%]"
+            id="modalProfile">
             <span
                 class="text-xs h-[50%] w-full bg-[#D9D9D9] rounded-t-2xl flex justify-center items-center hover:transition transition hover:delay-50 delay-50 hover:bg-[#C0C0C0] cursor-pointer"
                 id="optionProfile"><a href="">PERFIL</a></span>
@@ -105,8 +106,8 @@
                     <div class="bg-[#D9D9D9] h-full w-full inline-flex items-center">
 
                         <!-- Dados dentro do corpo da proposta -->
-                        <div class="h-full w-[50%] flex flex-col items-end justify-end">
-                            <div class="w-[91.67%] h-[8.89%] inline-flex justify-center items-center mt-2 ">
+                        <div class="h-full w-[50%] flex flex-col items-end justify-start">
+                            <div class="w-[91.67%] h-[8.89%] inline-flex justify-center items-center mt-2 xl:mt-[13px]">
                                 <div class="flex-1 flex justify-start">
                                     <div class="bg-[#C0C0C0] h-px w-[93%]"></div>
                                 </div>
@@ -115,22 +116,72 @@
                                     <div class="bg-[#C0C0C0] h-px w-[93%]"></div>
                                 </div>
                             </div>
-                            <div class="bg-amber-500 h-full w-[91.67%]">
+                            <div class="h-[77.5%] w-[91.67%] flex flex-col">
 
                                 <!-- CPF do cliente -->
-                                <div>
+                                <div class="h-[33.33%] w-full bg-emerald-500 flex flex-col">
 
+                                    <!-- Metade da esquerda do corpo dos dados -->
+                                    <div class="bg-pink-500 w-[50%] h-full inline-flex justify-center items-center">
+                                        <div class="flex flex-col w-full h-full">
+                                            <i class="text-sm">CPF</i>
+
+                                            <!-- Traço de separação -->
+                                            <div class="bg-[#C0C0C0] w-px h-[50%]"></div>
+                                        </div>
+                                        <div class="inline-flex">
+
+                                            <!-- Traço de separação -->
+                                            <div class="bg-[#C0C0C0] h-px w-[50%]"></div>
+
+                                            <i class="text-sm">124.284.329-90</i>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Nome do cliente -->
-                                 <div>
+                                <div class="h-[33.33%] w-full">
+                                    <div>
+                                        <span>
 
-                                 </div>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
 
-                                 <!-- Loja -->
-                                  <div>
+                                        </div>
+                                        <div>
 
-                                  </div>
+                                        </div>
+                                        <div>
+                                            <span>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Loja -->
+                                <div class="h-[33.33%] w-full">
+                                    <div>
+                                        <span>
+
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+
+                                        </div>
+                                        <div>
+
+                                        </div>
+                                        <div>
+                                            <span>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -261,7 +312,7 @@
         </div>
 
         <!-- Relatório das propostas e configurações avançadas -->
-        <div class="h-full w-[25%] ml-85 flex justify-end">
+        <div class="h-full w-[25%] ml-85 flex justify-end xl:ml-120">
             <div class="bg-[#D9D9D9] shadow-[5px_10px_10px_0px_rgba(0,0,0,0.6)] h-[30%] w-[15%] flex justify-center items-center"
                 id="modalGearAdvanced">
                 <span class="flex items-center">
@@ -278,64 +329,134 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script>
         function openModalGearAdvanced() {
-            if (document.getElementById("modalGearAdvanced").classList.contains("modalActive")) {
-                gsap.to('#modalGearAdvanced', {
-                    x: 0,
-                    duration: 1,
-                    onComplete: () => {
-                        document.getElementById("modalGearAdvanced").classList.remove("modalActive");
-                    }
-                })
+            if (window.matchMedia(`(min-width: ${1280}px)`)) {
+                if (document.getElementById("modalGearAdvanced").classList.contains("modalActive")) {
+                    gsap.to('#modalGearAdvanced', {
+                        x: 0,
+                        duration: 1,
+                        onComplete: () => {
+                            document.getElementById("modalGearAdvanced").classList.remove("modalActive");
+                        }
+                    })
 
-                gsap.to('#buttonOpenModalGearAdvanced', {
-                    rotation: 0,
-                    transformOrigin: 'center center'
-                })
+                    gsap.to('#buttonOpenModalGearAdvanced', {
+                        rotation: 0,
+                        transformOrigin: 'center center'
+                    })
+                } else {
+                    gsap.to('#modalGearAdvanced', {
+                        x: 72,
+                        duration: 1,
+                        onComplete: () => {
+                            document.getElementById("modalGearAdvanced").classList.add("modalActive");
+                        }
+                    })
+
+                    gsap.to('#buttonOpenModalGearAdvanced', {
+                        rotation: 90,
+                        transformOrigin: 'center center',
+                        y: 2,
+                        x: 2
+                    })
+                }
             } else {
-                gsap.to('#modalGearAdvanced', {
-                    x: 51,
-                    duration: 1,
-                    onComplete: () => {
-                        document.getElementById("modalGearAdvanced").classList.add("modalActive");
-                    }
-                })
+                if (document.getElementById("modalGearAdvanced").classList.contains("modalActive")) {
+                    gsap.to('#modalGearAdvanced', {
+                        x: 0,
+                        duration: 1,
+                        onComplete: () => {
+                            document.getElementById("modalGearAdvanced").classList.remove("modalActive");
+                        }
+                    })
 
-                gsap.to('#buttonOpenModalGearAdvanced', {
-                    rotation: 90,
-                    transformOrigin: 'center center',
-                    y: 2,
-                    x: 2
-                })
+                    gsap.to('#buttonOpenModalGearAdvanced', {
+                        rotation: 0,
+                        transformOrigin: 'center center'
+                    })
+                } else {
+                    gsap.to('#modalGearAdvanced', {
+                        x: 51,
+                        duration: 1,
+                        onComplete: () => {
+                            document.getElementById("modalGearAdvanced").classList.add("modalActive");
+                        }
+                    })
+
+                    gsap.to('#buttonOpenModalGearAdvanced', {
+                        rotation: 90,
+                        transformOrigin: 'center center',
+                        y: 2,
+                        x: 2
+                    })
+                }
             }
         }
 
         function openModalProfile() {
-            if (document.getElementById('optionProfile').classList.contains('rounded-t-2xl')) {
-
-                gsap.to('#modalProfile', {
-                    y: 54,
-                    onStart: () => {
-                        setTimeout(() => {
-                            document.getElementById('optionProfile').classList.remove('rounded-t-2xl')
-                        }, 50);
-                        document.getElementById('iconProfile').classList.remove('rounded-b-2xl');
-                        document.getElementById('iconProfile').classList.remove('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
-                    }
-                })
+            if (window.matchMedia(`(min-width: ${1280}px)`)) {
+                if (document.getElementById('optionProfile').classList.contains('rounded-t-2xl')) {
+                    gsap.to('#modalProfile', {
+                        y: 66,
+                        duration: 1,
+                        onStart: () => {
+                            setTimeout(() => {
+                                document.getElementById('optionProfile').classList.remove('rounded-t-2xl')
+                            }, 50);
+                            setTimeout(() => {
+                                document.getElementById('iconProfile').classList.remove('rounded-b-2xl')
+                            }, 150);
+                            document.getElementById('iconProfile').classList.remove('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
+                        }
+                    })
+                } else {
+                    gsap.to('#modalProfile', {
+                        y: 0,
+                        duration: 1,
+                        onStart: () => {
+                            setTimeout(() => {
+                                document.getElementById('iconProfile').classList.add('rounded-b-2xl');
+                            }, 200);
+                            setTimeout(() => {
+                                document.getElementById('optionProfile').classList.add('rounded-t-2xl');
+                            }, 220);
+                        },
+                        onComplete: () => {
+                            document.getElementById('iconProfile').classList.add('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
+                        }
+                    })
+                }
             } else {
-
-                gsap.to('#modalProfile', {
-                    y: 0,
-                    onStart: () => {
-                        document.getElementById('optionProfile').classList.add('rounded-t-2xl');
-                        setTimeout(() => {
-                            document.getElementById('iconProfile').classList.add('rounded-b-2xl')
-                        }, 220);
-                        setTimeout(() => {
-                            document.getElementById('iconProfile').classList.add('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]'), 920
-                        });
-                    }
-                })
+                if (document.getElementById('optionProfile').classList.contains('rounded-t-2xl')) {
+                    gsap.to('#modalProfile', {
+                        y: 54,
+                        duration: 1,
+                        onStart: () => {
+                            setTimeout(() => {
+                                document.getElementById('optionProfile').classList.remove('rounded-t-2xl')
+                            }, 50);
+                            setTimeout(() => {
+                                document.getElementById('iconProfile').classList.remove('rounded-b-2xl')
+                            }, 150);
+                            document.getElementById('iconProfile').classList.remove('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
+                        }
+                    })
+                } else {
+                    gsap.to('#modalProfile', {
+                        y: 0,
+                        duration: 1,
+                        onStart: () => {
+                            setTimeout(() => {
+                                document.getElementById('iconProfile').classList.add('rounded-b-2xl');
+                            }, 200);
+                            setTimeout(() => {
+                                document.getElementById('optionProfile').classList.add('rounded-t-2xl');
+                            }, 220);
+                        },
+                        onComplete: () => {
+                            document.getElementById('iconProfile').classList.add('shadow-[0_20px_25px_-5px_rgba(0,0,0,0.3)]');
+                        }
+                    })
+                }
             }
 
         }
