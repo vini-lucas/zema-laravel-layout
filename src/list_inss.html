@@ -9,19 +9,20 @@
     <title>Zema</title>
 </head>
 
-<body class="bg-[#DCDCDC] min-h-screen">
+<body class="bg-[#DCDCDC] min-h-screen overflow-hidden">
 
+    <!-- Sidebar -->
     <div class="flex">
         <aside
             class="bg-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full sm:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt"
             id="aside">
             <button class="flex ml-45 mt-5 cursor-pointer sm:hidden" onclick="return openNavbar()">
-                <i class="fa-solid fa-x text-xl text-[#DCDCDC]"></i>
+                <i class="fa-solid fa-xmark text-xl text-[#DCDCDC]"></i>
             </button>
+        </aside>
     </div>
 
-    </aside>
-
+    <!-- Navbar -->
     <nav class="bg-linear-to-l from-[#191970] to-[#3030D6] h-30 w-full flex items-center justify-between p-5">
 
         <button id="buttonOpenSidebar" class="flex ml-10 cursor-pointer">
@@ -32,6 +33,42 @@
             <i class="fa-solid fa-user text-2xl text-[#DCDCDC]"></i>
         </div>
     </nav>
+
+    <!-- Trilha de navegação -->
+     <div class="h-1/3 w-full inline-flex gap-1 justify-end pr-2">
+                <h6 class="text-[#808080]">Dashboard</h6>
+                <span class="text-[#808080]">/</span>
+                <h6 class="text-[#363636]">INSS</h6>
+            </div>
+
+    <!-- Conteúdo -->
+    <section class="h-screen border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out">
+
+        <!-- Filtragem de propostas -->
+        <div class="h-20 w-full flex-col">
+            
+            <div class="h-7 w-full inline-flex items-center gap-3">
+                <span class="bg-[#808080] h-px flex-0.5 w-4 ml-3"></span>
+                <h2 class="text-[#363636]">FILTRAGEM</h2>
+                <div class="bg-[#808080] h-px flex-1 mr-3"></div>
+            </div>
+
+            <div class="w-full h-1/3 inline-flex justify-center gap-4">
+                <div class="bg-[#C0C0C0] w-50 h-full border border-solid border-[#808080] rounded-md ml-3"></div>
+                <div class="bg-[#C0C0C0] w-50 h-full border border-solid border-[#808080] rounded-md mr-3"></div>
+            </div>
+
+            <div class="bg-[#808080] h-px mx-3 mt-2"></div>
+        </div>
+
+        <!-- Listagem das propostas -->
+        <div class="h-full w-full bg-amber-400 grid-cols-1 py-4">
+            <div class="bg-black w-15 h-15"></div>
+            <div class="bg-black w-15 h-15"></div>
+            <div class="bg-black w-15 h-15"></div>
+        </div>
+
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script>
