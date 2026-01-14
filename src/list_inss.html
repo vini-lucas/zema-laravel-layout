@@ -9,7 +9,7 @@
     <title>Zema</title>
 </head>
 
-<body class="bg-[#DCDCDC] min-h-screen overflow-hidden">
+<body class="bg-[#DCDCDC] h-min-screen">
 
     <!-- Sidebar -->
     <div class="flex">
@@ -35,18 +35,19 @@
     </nav>
 
     <!-- Trilha de navegação -->
-     <div class="h-1/3 w-full inline-flex gap-1 justify-end pr-2">
-                <h6 class="text-[#808080]">Dashboard</h6>
-                <span class="text-[#808080]">/</span>
-                <h6 class="text-[#363636]">INSS</h6>
-            </div>
+    <div class="w-full inline-flex gap-1 justify-end pr-2">
+        <h6 class="text-[#808080]">Dashboard</h6>
+        <span class="text-[#808080]">/</span>
+        <h6 class="text-[#363636]">INSS</h6>
+    </div>
 
     <!-- Conteúdo -->
-    <section class="h-screen border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out">
+    <section
+        class="flex flex-col min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out">
 
         <!-- Filtragem de propostas -->
-        <div class="h-20 w-full flex-col">
-            
+        <div class="h-20 w-full flex-col mb-2">
+
             <div class="h-7 w-full inline-flex items-center gap-3">
                 <span class="bg-[#808080] h-px flex-0.5 w-4 ml-3"></span>
                 <h2 class="text-[#363636]">FILTRAGEM</h2>
@@ -62,11 +63,71 @@
         </div>
 
         <!-- Listagem das propostas -->
-        <div class="h-full w-full bg-amber-400 grid-cols-1 py-4">
-            <div class="bg-black w-15 h-15"></div>
-            <div class="bg-black w-15 h-15"></div>
-            <div class="bg-black w-15 h-15"></div>
-        </div>
+        <div class="w-full h-full grid grid-cols-1 gap-4 justify-items-center">
+
+            <!-- Modal de cada proposta -->
+            <div class="w-145 h-60 bg-emerald-600">
+
+                <!-- Informações superiores da proposta -->
+                <div class="h-12 w-full inline-flex justify-center items-center">
+
+                    <!-- Número da proposta -->
+                    <div class="w-1/2 h-full flex justify-center items-center">
+                        <span
+                            class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs font-">PROPOSTA</span>
+                        <span
+                            class="bg-linear-to-l from-[#A9A9A9] to-[#C0C0C0] bg-clip-text text-transparent font-serif text-xs">#XXXXX</span>
+                    </div>
+
+                    <!-- Banner de alerta de pendências -->
+                    <div class="flex-1 h-full">
+                        <div
+                            class="w-full h-full inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
+                            <div class="w-[18%] h-full flex justify-center items-center">
+                                <i class="fa-solid fa-exclamation text-md text-[#FDF8E8]"></i>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center items-center rounded-r-sm">
+                                <span class="text-[10px] text-[#2F3032]">ATENÇÃO! HÁ PENDÊNCIAS NA PROPOSTA.</span>
+                                <span class="text-[10px] text-[#2F3032]">CLIQUE AQUI PARA VERIFICÁ-LAS.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Traço de separação -->
+                <div class="w-full h-px mt-0.75 flex justify-center">
+                    <div class="bg-[#C0C0C0] w-130 h-full"></div>
+                </div>
+
+                <!-- Corpo da proposta -->
+                <div class="bg-amber-600 h-full w-full inline-flex items-center">
+
+                    <!-- Lado esquerdo do corpo da proposta -->
+                    <div class="w-1/2 h-full flex flex-col">
+
+                        <div class="inline-flex w-65 h-auto bg-red-700 ml-7.5">
+                            <div class="flex-1 flex items-center justify-start">
+                                <div class="bg-[#C0C0C0] h-px w-22"></div>
+                            </div>
+                            <span class="text-[10px]">DADOS</span>
+                            <div class="flex-1 flex items-center justify-end">
+                                <div class="bg-[#C0C0C0] h-px w-30"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Traço de separação -->
+                    <div class="w-px h-full flex items-center">
+                        <div class="bg-[#C0C0C0] h-56.5 w-px"></div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
 
     </section>
 
