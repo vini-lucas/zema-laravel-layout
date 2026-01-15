@@ -63,10 +63,10 @@
         </div>
 
         <!-- Listagem das propostas -->
-        <div class="w-full h-full grid grid-cols-1 gap-4 justify-items-center">
+        <div class="w-full h-full grid grid-cols-1 gap-4 justify-items-center my-auto 2xl:inline-flex">
 
             <!-- Modal de cada proposta -->
-            <div class="w-145 h-60 bg-emerald-600">
+            <div class="w-145 h-80 border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 mb-4">
 
                 <!-- Informações superiores da proposta -->
                 <div class="h-12 w-full inline-flex justify-center items-center">
@@ -74,15 +74,15 @@
                     <!-- Número da proposta -->
                     <div class="w-1/2 h-full flex justify-center items-center">
                         <span
-                            class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs font-">PROPOSTA</span>
+                            class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs mr-1">PROPOSTA</span>
                         <span
-                            class="bg-linear-to-l from-[#A9A9A9] to-[#C0C0C0] bg-clip-text text-transparent font-serif text-xs">#XXXXX</span>
+                            class="bg-[#A9A9A9] bg-clip-text text-transparent font-serif text-xs">#XXXXX</span>
                     </div>
 
                     <!-- Banner de alerta de pendências -->
                     <div class="flex-1 h-full">
                         <div
-                            class="w-full h-full inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
+                            class="w-[99.5%] h-[98%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
                             <div class="w-[18%] h-full flex justify-center items-center">
                                 <i class="fa-solid fa-exclamation text-md text-[#FDF8E8]"></i>
                             </div>
@@ -96,31 +96,63 @@
                 </div>
 
                 <!-- Traço de separação -->
-                <div class="w-full h-px mt-0.75 flex justify-center">
-                    <div class="bg-[#C0C0C0] w-130 h-full"></div>
+                <div class="w-full h-px mt-1 flex justify-center">
+                    <div class="bg-[#A9A9A9] w-130 h-full"></div>
                 </div>
 
                 <!-- Corpo da proposta -->
-                <div class="bg-amber-600 h-full w-full inline-flex items-center">
+                <div class="h-full w-full inline-flex items-center">
 
                     <!-- Lado esquerdo do corpo da proposta -->
                     <div class="w-1/2 h-full flex flex-col">
 
-                        <div class="inline-flex w-65 h-auto bg-red-700 ml-7.5">
+                        <div class="inline-flex w-65 h-auto ml-7.5">
                             <div class="flex-1 flex items-center justify-start">
-                                <div class="bg-[#C0C0C0] h-px w-22"></div>
+                                <div class="bg-[#A9A9A9] h-px w-25"></div>
                             </div>
-                            <span class="text-[10px]">DADOS</span>
+                            <span class="text-[10px] font-extrabold">DADOS</span>
                             <div class="flex-1 flex items-center justify-end">
-                                <div class="bg-[#C0C0C0] h-px w-30"></div>
+                                <div class="bg-[#A9A9A9] h-px w-25"></div>
+                            </div>
+                        </div>
+                        <div class="flex-1 w-65 ml-7.5 mb-2">
+
+                            <!-- CPF -->
+                            <div class="w-25 h-20 flex flex-col items-center">
+                                <i class="text-sm font-mono">CPF</i>
+                                <div class="inline-flex">
+                                    <div class="bg-[#A9A9A9] w-px h-8 ml-42"></div>
+                                    <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3"></div>
+                                    <div class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-30 h-7 rounded-md"></div>
+                                </div>
+                            </div>
+
+                            <!-- Nome -->
+                            <div class="w-25 h-20 flex flex-col items-center">
+                                <i class="text-sm font-mono">NOME</i>
+                                <div class="inline-flex">
+                                    <div class="bg-[#A9A9A9] w-px h-8 ml-42"></div>
+                                    <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3"></div>
+                                    <div class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-30 h-7 rounded-md"></div>
+                                </div>
+                            </div>
+
+                            <!-- Loja -->
+                            <div class="w-25 h-20 flex flex-col items-center">
+                                <i class="text-sm font-mono">LOJA</i>
+                                <div class="inline-flex">
+                                    <div class="bg-[#A9A9A9] w-px h-8 ml-42"></div>
+                                    <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3"></div>
+                                    <div class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-30 h-7 rounded-md"></div>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- Traço de separação -->
-                    <div class="w-px h-full flex items-center">
-                        <div class="bg-[#C0C0C0] h-56.5 w-px"></div>
+                    <div class="w-px h-full flex items-start mt-4">
+                        <div class="bg-[#A9A9A9] h-56 w-px"></div>
                     </div>
 
 
@@ -128,6 +160,8 @@
                 </div>
 
             </div>
+
+        </div>
 
     </section>
 
