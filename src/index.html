@@ -63,8 +63,7 @@
         </div>
 
         <!-- Listagem das propostas -->
-        <div
-            class="w-full h-full grid grid-cols-1 2xl:grid-cols-2 gap-4 2xl:gap-0 justify-items-center my-auto">
+        <div class="w-full h-full grid grid-cols-1 2xl:grid-cols-2 gap-4 2xl:gap-0 justify-items-center my-auto">
 
             <!-- Modal de cada proposta -->
             <div
@@ -76,8 +75,9 @@
                     <!-- Número da proposta -->
                     <div class="w-1/2 h-full flex justify-center items-center">
                         <span
-                            class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs mr-1">PROPOSTA</span>
-                        <span class="bg-[#A9A9A9] bg-clip-text text-transparent font-serif text-xs">#XXXXX</span>
+                            class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs mr-1 font-semibold">PROPOSTA</span>
+                        <span
+                            class="bg-[#A9A9A9] bg-clip-text text-transparent font-serif text-xs font-semibold">#XXXXX</span>
                     </div>
 
                     <!-- Banner de alerta de pendências -->
@@ -85,7 +85,7 @@
                         <div
                             class="w-[99.5%] h-[98%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
                             <div class="w-[18%] h-full flex justify-center items-center">
-                                <i class="fa-solid fa-exclamation text-md text-[#FDF8E8]"></i>
+                                <i class="fa-solid fa-exclamation text-md sm:text-2xl text-[#FDF8E8]"></i>
                             </div>
                             <div class="flex-1 flex flex-col justify-center items-center rounded-r-sm">
                                 <span class="text-[6px] sm:text-[10px] text-[#2F3032] font-semibold">ATENÇÃO! HÁ
@@ -165,6 +165,31 @@
                     <!-- Traço de separação -->
                     <div class="w-px h-full flex items-start mt-4">
                         <div class="bg-[#A9A9A9] h-56 w-px"></div>
+                    </div>
+
+                    <!-- Lado direito da proposta -->
+                    <div class="flex flex-col h-62.5 w-1/2 mb-14">
+
+                        <div class="h-full w-full flex items-start">
+                            <div class="flex w-36 sm:w-65">
+                                <div class="flex-1 flex items-start justify-start">
+                                    <div class="bg-[#A9A9A9] h-px w-12 sm:w-25"></div>
+                                </div>
+                                <span class="text-[10px] font-extrabold mb-9 inline-block">RETORNO</span>
+                                <div class="flex-1 flex items-start justify-end">
+                                    <div class="bg-[#A9A9A9] h-px w-12 sm:w-25"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botão atuar na proposta -->
+                        <div class="h-full w-full flex justify-center items-end">
+                            <span
+                                class="w-50 h-10 bg-linear-to-l from-[#191970] to-[#3030D6] rounded-md flex justify-center items-center mb-16 shadow-2xl shadow-black cursor-pointer hover:bg-linear-to-l hover:from-[#3030D6] hover:to-[#191970] transition ease-linear hover:ease-linear delay-75 duration-300">
+                                <i class="text-[12px] text-white font-semibold">ATUAR NA PROPOSTA</i>
+                            </span>
+                        </div>
+
                     </div>
 
 
