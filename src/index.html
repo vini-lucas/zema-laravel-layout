@@ -122,39 +122,43 @@
 
                             <!-- CPF -->
                             <div class="w-25 h-20 flex flex-col items-center">
-                                <span class="text-sm font-mono mr-18 sm:mr-0">CPF</span>
+
+                                <!-- <i class="fa-regular fa-file text-sm"></i> -->
+                                <span class="text-sm font-serif mr-18 sm:mr-0 text-[#808080]">CPF</span>
+
+
                                 <div class="inline-flex">
                                     <div class="bg-[#A9A9A9] w-px h-8 ml-47 mr-2 sm:mr-0"></div>
                                     <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3 hidden sm:flex"></div>
                                     <div
                                         class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-29 sm:w-35 h-7 rounded-md flex justify-center items-center mr-34 sm:mr-0">
-                                        <span class="text-[#808080] text-sm">124.284.329-90</span>
+                                        <span class="text-[#808080] text-md font-serif">124.284.329-90</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Nome -->
                             <div class="w-25 h-20 flex flex-col items-center">
-                                <span class="text-sm font-mono mr-18 sm:mr-0">NOME</span>
+                                <span class="text-sm font-serif mr-18 sm:mr-0 text-[#808080]">NOME</span>
                                 <div class="inline-flex">
                                     <div class="bg-[#A9A9A9] w-px h-8 ml-47 mr-2 sm:mr-0"></div>
                                     <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3 hidden sm:flex"></div>
                                     <div
                                         class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-29 sm:w-35 h-7 rounded-md flex justify-center items-center mr-34 sm:mr-0">
-                                        <span class="text-[#808080] text-sm">LUCAS VINICIUS</span>
+                                        <span class="text-[#808080] text-sm font-serif">LUCAS VINICIUS</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Loja -->
                             <div class="w-25 h-20 flex flex-col items-center">
-                                <span class="text-sm font-mono mr-18 sm:mr-0">LOJA</span>
+                                <span class="text-sm font-serif mr-18 sm:mr-0 text-[#808080]">LOJA</span>
                                 <div class="inline-flex">
                                     <div class="bg-[#A9A9A9] w-px h-8 ml-47 mr-2 sm:mr-0"></div>
                                     <div class="bg-[#A9A9A9] w-8 h-px ml-2 mr-2 mt-3 hidden sm:flex"></div>
                                     <div
                                         class="bg-[#D3D3D3] border border-solid border-[#A9A9A9] w-29 sm:w-35 h-7 rounded-md flex justify-center items-center mr-34 sm:mr-0">
-                                        <span class="text-[#808080] text-sm">PRÓ-VAREJO</span>
+                                        <span class="text-[#808080] text-sm font-serif">PRÓ-VAREJO</span>
                                     </div>
                                 </div>
                             </div>
@@ -170,23 +174,39 @@
                     <!-- Lado direito da proposta -->
                     <div class="flex flex-col h-62.5 w-1/2 mb-14">
 
-                        <div class="h-full w-full flex items-start">
-                            <div class="flex w-36 sm:w-65">
+                        <div class="w-full flex items-start h-auto">
+                            <div class="flex w-36 sm:w-65 mt-px">
                                 <div class="flex-1 flex items-start justify-start">
-                                    <div class="bg-[#A9A9A9] h-px w-12 sm:w-25"></div>
+                                    <div class="bg-[#A9A9A9] h-px w-10 sm:w-25"></div>
                                 </div>
-                                <span class="text-[10px] font-extrabold mb-9 inline-block">RETORNO</span>
+                                <span class="text-[10px] font-extrabold -mt-1.5">RETORNO</span>
                                 <div class="flex-1 flex items-start justify-end">
-                                    <div class="bg-[#A9A9A9] h-px w-12 sm:w-25"></div>
+                                    <div class="bg-[#A9A9A9] h-px w-10 mr-0.5 sm:mr-0 sm:w-25"></div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Observação da mesa -->
+                        <div class="w-full h-full flex flex-col justify-center items-center mt-1">
+                            <div class="inline-flex items-start h-auto w-40 sm:w-50">
+                                <div class="flex justify-center items-center h-5 w-5 border border-solid border-[#A9A9A9] border-b-transparent border-r-transparent rounded-tl-md bg-[#D3D3D3] pl-2">
+                                    <i class="fa-solid fa-user text-[#696969]"></i>
+                                </div>
+                                <div class="flex justify-center items-center h-5 w-full px-3 border border-solid border-[#A9A9A9] border-b-transparent rounded-tr-md bg-[#D3D3D3] border-l-transparent">
+                                    <span class="text-sm text-[#696969]">Lucas Vinicius</span>
+                                </div>
+                            </div>
+                            <div
+                                class="w-40 sm:w-50 min-h-10 max-h-auto bg-[#D3D3D3] border border-solid border-[#A9A9A9] rounded-br-md rounded-bl-md">
+                                <div class="break-words w-full max-h-10 overflow-y-auto"></div>
                             </div>
                         </div>
 
                         <!-- Botão atuar na proposta -->
                         <div class="h-full w-full flex justify-center items-end">
                             <span
-                                class="w-50 h-10 bg-linear-to-l from-[#191970] to-[#3030D6] rounded-md flex justify-center items-center mb-16 shadow-2xl shadow-black cursor-pointer hover:bg-linear-to-l hover:from-[#3030D6] hover:to-[#191970] transition ease-linear hover:ease-linear delay-75 duration-300">
-                                <i class="text-[12px] text-white font-semibold">ATUAR NA PROPOSTA</i>
+                                class="w-40 sm:w-50 h-10 bg-linear-to-l from-[#191970] to-[#3030D6] rounded-md flex justify-center items-center mb-16 shadow-2xl shadow-black cursor-pointer hover:bg-linear-to-l hover:from-[#3030D6] hover:to-[#191970] transition ease-linear hover:ease-linear delay-75 duration-300">
+                                <span class="text-[12px] text-white font-semibold">ATUAR NA PROPOSTA</span>
                             </span>
                         </div>
 
