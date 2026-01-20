@@ -14,7 +14,7 @@
     <!-- Sidebar -->
     <div class="flex">
         <aside
-            class="bg-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt"
+            class="bg-linear-to-t from-[#191970] to-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt"
             id="aside">
             <button class="flex ml-45 mt-5 cursor-pointer sm:hidden" onclick="return openNavbar()">
                 <i class="fa-solid fa-xmark text-xl text-[#DCDCDC]"></i>
@@ -24,36 +24,35 @@
                     <a href="index.html"><img src="public/zema-logo.png" alt="Zema" class="h-10 w-10"></a>
                 </div>
                 <div class="w-full h-123.5 flex flex-col">
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div
+                        class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-solid fa-house text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">DASHBOARD</span>
+                        <span class="text-[#DCDCDC] text-sm">DASHBOARD</span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div
+                        class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-solid fa-users text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">USUÁRIOS</span>
+                        <span class="text-[#DCDCDC] text-sm"><a href="users.html">USUÁRIOS</a></span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div class="w-full h-15 flex justify-center items-center gap-1 relative hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100 bg-[#191970]">
                         <i class="fa-solid fa-coins text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">INSS</span>
-                        <div class="h-full w-full flex justify-end items-end">
-                            <div class="h-full w-3 bg-[#191970]"></div>
-                        </div>
+                        <span class="text-[#DCDCDC] text-sm"><a href="inss.html">INSS</a></span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-solid fa-store text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">EMPRESAS</span>
+                        <span class="text-[#DCDCDC] text-sm">EMPRESAS</span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-solid fa-code-branch text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">FILIAIS</span>
+                        <span class="text-[#DCDCDC] text-sm">FILIAIS</span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-solid fa-cart-arrow-down text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">PRODUTOS</span>
+                        <span class="text-[#DCDCDC] text-sm">PRODUTOS</span>
                     </div>
-                    <div class="w-full h-15 flex justify-center items-center gap-1">
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
                         <i class="fa-brands fa-product-hunt text-[#DCDCDC]"></i>
-                        <span class="text-[#DCDCDC] text-md">PLANOS DE PRODUTOS</span>
+                        <span class="text-[#DCDCDC] text-sm">PLANOS DE PRODUTOS</span>
                     </div>
                 </div>
             </div>
@@ -74,7 +73,7 @@
 
     <!-- Trilha de navegação -->
     <div class="w-full inline-flex gap-1 justify-end pr-2">
-        <h6 class="text-[#808080]">Dashboard</h6>
+        <h6 class="text-[#808080]"><a href="index.html">Dashboard</a></h6>
         <span class="text-[#808080]">/</span>
         <h6 class="text-[#363636]">INSS</h6>
     </div>
@@ -117,7 +116,7 @@
                 <div class="h-12 w-full inline-flex justify-center items-center">
 
                     <!-- Número da proposta -->
-                    <div class="w-1/2 h-full flex justify-center items-center">
+                    <div class="ml-7 w-1/2 sm:w-66 h-full flex justify-center items-center mt-3">
                         <span
                             class="bg-linear-to-l from-[#191970] to-[#3030D6] bg-clip-text text-transparent font-serif text-xs mr-1 font-semibold">PROPOSTA</span>
                         <span
@@ -125,9 +124,9 @@
                     </div>
 
                     <!-- Banner de alerta de pendências -->
-                    <div class="flex-1 h-full">
+                    <div class="w-1/2 flex-1 h-full flex justify-start items-center">
                         <div
-                            class="w-[99.5%] h-[98%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30">
+                            class="w-40 h-10 sm:w-[90%] sm:h-[90%] inline-flex border border-l-2 border-solid border-white rounded-xs rounded-r-sm bg-[#F2C94C] shadow-md shadow-black/30 mr-5 sm:mr-0">
                             <div class="w-[18%] h-full flex justify-center items-center">
                                 <i class="fa-solid fa-exclamation text-md sm:text-2xl text-[#FDF8E8]"></i>
                             </div>
