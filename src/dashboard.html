@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Zema</title>
+</head>
+
+<body class="bg-[#DCDCDC] h-min-screen">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <aside
+            class="bg-linear-to-t from-[#191970] to-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt"
+            id="aside">
+            <button class="flex ml-45 mt-5 cursor-pointer sm:hidden" onclick="return openNavbar()">
+                <i class="fa-solid fa-xmark text-xl text-[#DCDCDC]"></i>
+            </button>
+            <div class="w-full h-full">
+                <div class="h-25 w-full flex justify-center items-center">
+                    <a href="index.html"><img src="public/zema-logo.png" alt="Zema" class="h-10 w-10"></a>
+                </div>
+                <div class="w-full h-123.5 flex flex-col">
+                    <div
+                        class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100 bg-[#191970]">
+                        <i class="fa-solid fa-house text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm"><a href="dashboard.html">DASHBOARD</a></span>
+                    </div>
+                    <div
+                        class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-solid fa-users text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm"><a href="users.html">USUÁRIOS</a></span>
+                    </div>
+                    <div class="w-full h-15 flex justify-center items-center gap-1 relative hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-solid fa-coins text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm"><a href="inss.html">INSS</a></span>
+                    </div>
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-solid fa-store text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm">EMPRESAS</span>
+                    </div>
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-solid fa-code-branch text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm">FILIAIS</span>
+                    </div>
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-solid fa-cart-arrow-down text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm">PRODUTOS</span>
+                    </div>
+                    <div class="w-full h-15 flex justify-center items-center gap-1 hover:bg-[#191970] transition ease-linear hover:ease-linear delay-10 duration-100">
+                        <i class="fa-brands fa-product-hunt text-[#DCDCDC]"></i>
+                        <span class="text-[#DCDCDC] text-sm">PLANOS DE PRODUTOS</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-linear-to-l from-[#191970] to-[#3030D6] h-30 w-full flex items-center justify-between p-5">
+
+        <button id="buttonOpenSidebar" class="flex ml-10 cursor-pointer">
+            <i class="fa-solid fa-bars text-2xl text-[#DCDCDC]"></i>
+        </button>
+
+        <div class="flex mr-10">
+            <i class="fa-solid fa-user text-2xl text-[#DCDCDC]"></i>
+        </div>
+    </nav>
+
+    <!-- Trilha de navegação -->
+    <div class="w-full inline-flex gap-1 justify-end pr-2">
+        <h6 class="text-[#363636]">Dashboard</h6>
+    </div>
+
+    <!-- Conteúdo -->
+    <section
+        class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out">
+
+        <h2 class="font-semibold p-3">Olá, Lucas!</h2>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script>
+
+        function openNavbar() {
+            if (document.getElementById('aside').classList.contains('-translate-x-full')) {
+                document.getElementById('aside').classList.remove('-translate-x-full');
+            } else {
+                document.getElementById('aside').classList.add('-translate-x-full');
+            }
+        }
+
+        document.getElementById('buttonOpenSidebar').addEventListener('click', (e) => {
+            e.preventDefault();
+            openNavbar();
+        })
+    </script>
+</body>
+
+</html>
