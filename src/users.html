@@ -92,6 +92,9 @@
     <section
         class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out">
 
+        <!-- Modal detalhes do usuário -->
+        <div class="absolute border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 w-100 h-100 ml-85 mt-20"></div>
+
         <!-- Filtragem dos usuários -->
         <div class="h-20 w-full flex-col mb-2">
 
@@ -112,12 +115,11 @@
         </div>
 
         <!-- Listagem dos usuários -->
-        <div
-            class="w-full h-full grid grid-cols-1 sm:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center my-auto">
+        <div class="w-full h-full grid grid-cols-1 sm:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center my-auto">
 
             <!-- Modal de cada usuário -->
-            <div
-                class="border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 h-50 w-50 flex flex-col mb-4">
+            <div class="border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 h-50 w-50 flex flex-col mb-4"
+                onclick="return openModalUser()" id="ppOne">
                 <div class="w-full h-1/2 flex items-center justify-center">
                     <img src="public/user.webp" width="80" height="80" alt="Perfil" class="rounded-md">
                 </div>
@@ -204,7 +206,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script>
-
         function openNavbar() {
             if (document.getElementById('aside').classList.contains('-translate-x-full')) {
                 document.getElementById('aside').classList.remove('-translate-x-full');
