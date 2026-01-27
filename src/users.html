@@ -12,9 +12,25 @@
 <body class="bg-[#DCDCDC] min-h-screen">
 
     <!-- Modal detalhes do usuário -->
-        <div class="bg-linear-to-t from-[#191970] to-[#3030D6] fixed border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 w-100 h-100 left-152.5 top-32">
-            
+    <div
+        class="bg-[#DCDCDC] fixed border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 w-80 h-80 top-59 left-8 sm:w-100 sm:h-100 sm:left-152.5 sm:top-32 z-50 flex flex-col">
+
+        <!-- Foto de perfil do usuário e botão fechar -->
+        <div class="bg-amber-500 w-full h-20 flex justify-center items-center">
+            <img src="public/user.webp" width="60" height="60" alt="Perfil" class="rounded-md">
+            <div class="flex flex-col px-1 gap-2 items-center">
+                <div class="max-w-auto">
+                    <span
+                        class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap">Lucas
+                        Vinicius dos Santos Silva</span>
+                </div>
+                <div class="w-auto">
+                    <span
+                        class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969]">124.284.329-90</span>
+                </div>
+            </div>
         </div>
+    </div>
 
     <!-- Sidebar -->
     <div class="flex">
@@ -95,7 +111,7 @@
 
     <!-- Conteúdo -->
     <section
-        class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out blur-sm">
+        class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out blur-sm pointer-events-none">
 
         <!-- Filtragem dos usuários -->
         <div class="h-20 w-full flex-col mb-2">
