@@ -13,25 +13,78 @@
 
     <!-- Modal detalhes do usuário -->
     <div
-        class="bg-[#DCDCDC] fixed border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 w-80 h-80 top-59 left-8 sm:w-100 sm:h-100 sm:left-152.5 sm:top-32 z-50 flex flex-col">
+        class="bg-[#DCDCDC] fixed border border-solid border-[#808080] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.15)] shadow-black/30 w-80 h-80 top-59 left-8 sm:w-100 sm:h-100 sm:left-152.5 sm:top-32 z-40 flex flex-col hidden" id="modal">
 
         <!-- Foto de perfil do usuário e botão fechar -->
         <div class="w-full h-20 flex justify-center items-center">
             <img src="public/user.webp" width="60" height="60" alt="Perfil" class="rounded-md">
             <div class="flex flex-col px-1 gap-2 items-center">
+                <span class="w-10 h-10 absolute right-0 top-0 flex justify-center items-center">
+                    <i class="fa-solid fa-xmark text-[#B22222] text-sm cursor-pointer" onclick="return closeModal()"></i>
+                </span>
+                <div class="max-w-auto">
+                    <span
+                        class="bg-[#9ACD32] px-2 rounded-md border-[#008000] border-2 border-solid text-[#006400] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap">Ativo</span>
+                </div>
                 <div class="max-w-auto">
                     <span
                         class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap">Lucas
                         Vinicius dos Santos Silva</span>
                 </div>
-                <div class="w-auto">
-                    <span
-                        class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969]">124.284.329-90</span>
-                </div>
+            </div>
 
-                <div class="w-full h-px flex justify-center">
-                    <div class="w-[90%] h-full bg-[#A9A9A9]"></div>
-                </div>
+        </div>
+        <div class="w-full h-px flex justify-center">
+            <div class="w-[90%] h-full bg-[#A9A9A9]"></div>
+        </div>
+        <div class="flex-1 w-full grid grid-cols-2 gap-1 p-3">
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center sm:text-sm font-semibold">CPF</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center sm:text-sm">124.284.329-90</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">E-mail</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">lucasvini269@gmail.com</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Nascimento</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">06/02/2006 - 19 anos</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Telefone</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">(43) 9 9985-9499</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Gênero</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">Masculino</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Empresa</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">Pró-Varejo</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Filial</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">Ibaiti/PR</span>
+            </div>
+            <div class="max-w-auto flex flex-col justify-center">
+                <span
+                    class="text-[10px] bg-[#C0C0C0] px-2 rounded-t-md border-[#808080] border-t-2 border-x-2 border-b-px border-solid w-18 mx-auto flex justify-center items-center">Acesso</span>
+                <span
+                    class="bg-[#C0C0C0] px-2 rounded-md border-[#808080] border-2 border-solid text-[#696969] text-[10px] overflow-x-auto max-w-62 max-h-7 block whitespace-nowrap text-center">Desenvolvedor</span>
             </div>
         </div>
     </div>
@@ -39,7 +92,7 @@
     <!-- Sidebar -->
     <div class="flex">
         <aside
-            class="bg-linear-to-t from-[#191970] to-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt"
+            class="bg-linear-to-t from-[#191970] to-[#3030D6] w-64 inset-y-0 fixed left-0 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-5 mt z-50"
             id="aside">
             <button class="flex ml-45 mt-5 cursor-pointer sm:hidden" onclick="return openNavbar()">
                 <i class="fa-solid fa-xmark text-xl text-[#DCDCDC]"></i>
@@ -115,7 +168,7 @@
 
     <!-- Conteúdo -->
     <section
-        class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out blur-sm pointer-events-none">
+        class="flex flex-col min-h-140 sm:min-h-118 border border-solid border-[#808080] rounded-md mx-3 my-2 sm:ml-67 transform duration-300 ease-in-out" id="content">
 
         <!-- Filtragem dos usuários -->
         <div class="h-20 w-full flex-col mb-2">
@@ -149,7 +202,7 @@
                     <span class="text-sm text-[#696969]">124.284.329-90</span>
                     <span class="text-sm text-[#696969]">Lucas Vinicius</span>
                     <div class="inline-flex gap-2 my-3">
-                        <i class="fa-solid fa-eye text-lg text-[#191970] cursor-pointer"></i>
+                        <i class="fa-solid fa-eye text-lg text-[#191970] cursor-pointer" onclick="return openModal()"></i>
                         <i class="fa-solid fa-pen-to-square text-lg text-[#006400] cursor-pointer"></i>
                         <i class="fa-solid fa-trash-can text-lg text-[#FF0000] cursor-pointer"></i>
                     </div>
@@ -240,6 +293,18 @@
             e.preventDefault();
             openNavbar();
         })
+    </script>
+    <script>
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('content').classList.remove('blur-sm', 'pointer-events-none');
+        }
+    </script>
+    <script>
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('content').classList.add('blur-sm', 'pointer-events-none');
+        }
     </script>
 </body>
 
